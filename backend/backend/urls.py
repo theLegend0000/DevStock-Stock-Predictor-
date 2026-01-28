@@ -17,6 +17,8 @@ Including another URLconf
 from django.urls import path
 from core.views import StockView, StocksListView, StockDetailView, PredictionsListView, PredictionDetailView, NewsListView, NewsDetailView, MarketIndicesView, MarketStatusView, MarketMoversView
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -43,4 +45,7 @@ urlpatterns = [
     path('api/market/status/', MarketStatusView.as_view(), name='market-status'),
     path('api/market/movers/', MarketMoversView.as_view(), name='market-movers'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
