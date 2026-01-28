@@ -1,0 +1,112 @@
+/* Stock Chart Styles */
+.stock-chart {
+  width: 100%;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.chart-legend {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.legend-actual {
+  background-color: #3b82f6;
+}
+
+.legend-prediction {
+  background-color: #8b5cf6;
+}
+
+.chart-timeframes {
+  display: flex;
+  gap: var(--spacing-xs);
+  background-color: var(--color-bg-tertiary);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-md);
+}
+
+.timeframe-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.timeframe-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.timeframe-btn.active {
+  background-color: var(--color-accent-primary);
+  color: white;
+}
+
+/* Chart Tooltip */
+.chart-tooltip {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.chart-tooltip-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.chart-tooltip-price {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.chart-tooltip-prediction {
+  font-size: var(--font-size-xs);
+  color: #8b5cf6;
+  font-weight: 500;
+}
+
+.chart-tooltip-volume {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+/* Mini Chart (for cards) */
+.mini-chart {
+  width: 100%;
+  height: 60px;
+}
+
+.mini-chart .recharts-cartesian-grid,
+.mini-chart .recharts-xaxis,
+.mini-chart .recharts-yaxis {
+  display: none;
+}

@@ -1,0 +1,381 @@
+/* Stock Card Styles */
+.stock-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.stock-card:hover {
+  border-color: var(--color-border-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.stock-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.stock-card-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--color-accent-gradient);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: white;
+}
+
+.stock-card-info {
+  flex: 1;
+}
+
+.stock-card-symbol {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.stock-card-name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stock-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stock-card-price-lg {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.stock-card-change-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.stock-card-change-badge.positive {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.stock-card-change-badge.negative {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.stock-card-footer {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.stock-card-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stock-card-stat .stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.stock-card-stat .stat-value {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+/* Compact Stock Card */
+.stock-card-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.stock-card-compact:hover {
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-border-light);
+}
+
+.stock-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stock-card-compact .stock-card-symbol {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.stock-card-compact .stock-card-name {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stock-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.stock-card-price {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.stock-card-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.stock-card-change.positive {
+  color: var(--color-success);
+}
+
+.stock-card-change.negative {
+  color: var(--color-danger);
+}
+
+/* Market Overview Card */
+.market-overview-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+}
+
+.market-overview-card:hover {
+  border-color: var(--color-border-light);
+}
+
+.market-overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.market-overview-name {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.market-overview-symbol {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.market-overview-value {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.market-overview-change {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.market-overview-change.positive {
+  color: var(--color-success);
+}
+
+.market-overview-change.negative {
+  color: var(--color-danger);
+}
+
+/* Prediction Card */
+.prediction-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.prediction-card:hover {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 1px var(--color-accent-primary);
+}
+
+.prediction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.prediction-stock {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.prediction-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--color-accent-gradient);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: white;
+}
+
+.prediction-symbol {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.prediction-name {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.prediction-confidence {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.confidence-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.confidence-value {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-accent-primary);
+}
+
+.prediction-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.prediction-direction {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.prediction-direction.bullish {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.prediction-direction.bearish {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.prediction-targets {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.prediction-target {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.target-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.target-value {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.target-value.bullish {
+  color: var(--color-success);
+}
+
+.target-value.bearish {
+  color: var(--color-danger);
+}
+
+/* Card Animation */
+.card-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
