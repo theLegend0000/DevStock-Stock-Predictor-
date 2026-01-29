@@ -46,6 +46,3 @@ urlpatterns = [
     path('api/market/movers/', MarketMoversView.as_view(), name='market-movers'),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
