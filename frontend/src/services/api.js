@@ -212,12 +212,39 @@ async function fetchApi(endpoint, options = {}) {
 /**
  * Stock API methods
  */
+/**
+ * Stock API methods
+ */
 export const stockApi = {
+  /**
+   * Get all stocks
+   * @returns {Promise<Array>} List of stocks
+   */
   getAll: () => fetchApi('/stocks/'),
+
+  /**
+   * Get stock by symbol
+   * @param {string} symbol - Stock ticker symbol
+   * @returns {Promise<Object>} Stock data
+   */
   getBySymbol: (symbol) => fetchApi(`/stocks/${symbol}/`),
+
+  /**
+   * Get stock price history
+   * @param {string} symbol - Stock ticker symbol
+   * @param {string} range - Time range (1d, 1w, 1m, 3m, 1y)
+   * @returns {Promise<Array>} Price history data
+   */
   getHistory: (symbol, range = '1m') => fetchApi(`/stocks/${symbol}/history/?range=${range}`),
+
+  /**
+   * Search stocks
+   * @param {string} query - Search query
+   * @returns {Promise<Array>} Matching stocks
+   */
   search: (query) => fetchApi(`/stocks/search/?q=${encodeURIComponent(query)}`),
 };
+
 
 /**
  * Prediction API methods
