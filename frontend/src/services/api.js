@@ -4,7 +4,7 @@
  * Connected to Django REST API at localhost:8000
  */
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 
 /**
@@ -54,7 +54,7 @@ export const stockApi = {
    * Get all stocks
    * @returns {Promise<Array>} List of stocks
    */
-  getAll: () => fetchApi('/stocks/'),
+  getAll: () => fetchApi('/stocks'),
 
   /**
    * Get stock by symbol
@@ -87,7 +87,7 @@ export const predictionApi = {
    * Get all predictions
    * @returns {Promise<Array>} List of predictions
    */
-  getAll: () => fetchApi('/predictions/'),
+  getAll: () => fetchApi('/predictions'),
 
   /**
    * Get prediction for specific stock
@@ -115,7 +115,7 @@ export const newsApi = {
    */
   getAll: (params = {}) => {
     const query = new URLSearchParams(params).toString();
-    return fetchApi(`/news/${query ? `?${query}` : ''}`);
+    return fetchApi(`/news${query ? `?${query}` : ''}`);
   },
 
   /**
@@ -123,7 +123,7 @@ export const newsApi = {
    * @param {string} category - News category
    * @returns {Promise<Array>} Filtered articles
    */
-  getByCategory: (category) => fetchApi(`/news/?category=${category}`),
+  getByCategory: (category) => fetchApi(`/news?category=${category}`),
 
   /**
    * Get article by ID
@@ -141,13 +141,13 @@ export const marketApi = {
    * Get market indices
    * @returns {Promise<Array>} Market index data
    */
-  getIndices: () => fetchApi('/market/indices/'),
+  getIndices: () => fetchApi('/market/indices'),
 
   /**
    * Get market status
    * @returns {Promise<Object>} Market status
    */
-  getStatus: () => fetchApi('/market/status/'),
+  getStatus: () => fetchApi('/market/status'),
 
   /**
    * Get top movers
