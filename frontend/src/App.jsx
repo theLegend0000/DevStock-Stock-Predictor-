@@ -6,6 +6,7 @@ import News from './pages/News';
 import StockDetail from './pages/StockDetail';
 import Predictions from './pages/Predictions';
 import Analytics from './pages/Analytics';
+import DebugEnv from './pages/DebugEnv';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
       </Route>
       <Route path="/stock/:symbol" element={<Layout />}>
         <Route index element={<StockDetail />} />
+      </Route>
+      <Route path="/debug-env" element={<Layout />}>
+        <Route index element={<DebugEnv />} />
       </Route>
     </Routes>
   );
