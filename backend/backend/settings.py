@@ -35,8 +35,13 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['https://dev-stock-stock-predictor-l5xn.vercel.app/'
-                 , 'https://devstock-stock-predictor-production.up.railway.app/']
+ALLOWED_HOSTS = [
+    'dev-stock-stock-predictor-l5xn.vercel.app',
+    'devstock-stock-predictor-production.up.railway.app',
+    'localhost',
+    '127.0.0.1'
+]
+
 
 
 # Application definition
