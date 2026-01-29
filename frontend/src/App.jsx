@@ -30,9 +30,7 @@ function App() {
       <Route path="/stock/:symbol" element={<Layout />}>
         <Route index element={<StockDetail />} />
       </Route>
-      <Route path="/debug-env" element={<Layout />}>
-        <Route index element={<DebugEnv />} />
-      </Route>
+      <Route path="/debug-env" element={<DebugEnv />} />
     </Routes>
   );
 }
