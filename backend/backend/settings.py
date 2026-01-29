@@ -35,7 +35,8 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://dev-stock-stock-predictor-l5xn.vercel.app/'
+                 , 'https://devstock-stock-predictor-production.up.railway.app/']
 
 
 # Application definition
@@ -66,12 +67,11 @@ MIDDLEWARE = [
 
 # Allow cross-origin requests from the React dev server
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:5173',
-    'http://localhost:5173',
-    'http://127.0.0.1:3000',
-    'http://localhost:3000',
-    'http://localhost:8080',
+    "https://dev-stock-stock-predictor-l5xn.vercel.app/",
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'backend.urls'
